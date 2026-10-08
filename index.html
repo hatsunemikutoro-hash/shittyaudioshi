@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="player" preload="metadata"></audio>
+
+    <input type='file' id="audio-input" class="audio-input" name="audio" accept=".mp3, .wav"/>
+
+
+    <div class="container">
+        <div class="card">
+            <button id="play">▶</button>
+            <button id="back">−15s</button>
+            <button id="forward">+30s</button>
+
+            <input id="jumpTo" placeholder="01:37:42">
+            <button id="jump">Ir</button>
+
+            <input id="seek" type="range" min="0" max="100" value="0">
+            <span id="time">00:00 / 00:00</span>
+
+            <select id="speed">
+                <option value="1">1x</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <option value="1.75">1.75x</option>
+                <option value="2">2x</option>
+            </select>
+
+            <div class="volume-control"> <span id="volume-icon">🔊</span> <input id="volume" type="range" min="0" max="100" value="80" aria-label="Volume" > <span id="volume-value">80%</span> </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
